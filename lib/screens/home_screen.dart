@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../widgets/bottom_nav_bar.dart';
 import '../widgets/video_player_item.dart';
 import '../models/video_model.dart';
+
 
 
 class HomeScreen extends StatefulWidget {
@@ -55,15 +55,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           showControls: true,
           );
-        },
-      ),
-      bottomNavigationBar: BottomNavBar(
-        pageIdx: _pageIdx,
-        onTap: (index) {
-          setState(() {
-            _pageIdx = index;
-            _pageController.jumpToPage(index);
-          });
         },
       ),
     );
